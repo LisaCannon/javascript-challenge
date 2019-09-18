@@ -9,19 +9,21 @@ UFOentry.forEach((entry) => {
       cell.text(value);
     });
   });
+const descrList = ["datetime","city","state","country","shape"];
 
 //uptdate table with selections
 var button = d3.select("#filter-btn");
-var descr_list = ["datetime","city","state","country","shape"];
-var filterUFO = UFOentry;
+
+
 //after selections are entered, clicking the filter button filters the data in the table
 button.on("click", function() {
-  for (i = 0; i < descr_list.length;i++){
-    var inputVal = d3.select("#"+descr_list[i]).property("value");
+  var filterUFO = UFOentry;
+  for (i = 0; i < descrList.length;i++){
+    var inputVal = d3.select("#"+descrList[i]).property("value");
     console.log(inputVal);
     //if no value is selected for an input field, no filter is added
     if (inputVal !== "") {
-      filterUFO = filterUFO.filter(UFO => UFO[descr_list[i]] === inputVal);
+      filterUFO = filterUFO.filter(UFO => UFO[descrList[i]] === inputVal);
     } 
   }
   console.log(filterUFO);
