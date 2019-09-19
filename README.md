@@ -1,6 +1,6 @@
 # javascript-challenge
 
-## The Data:
+### The Data:
 Characteristics of UFO sightings from 1/1/2010-1/13/2010.  
 ### Challenge: 
 Design a website to display a dynamic table based on UFO sighting data, using only use pure JavaScript, HTML, and CSS, and D3.js. Allow the user to select a date on which to filter the data displayed in the table.
